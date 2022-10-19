@@ -78,7 +78,7 @@ static void _dtor(SDL_Window *window, SDL_Renderer *renderer);
 static void _draw_field(SDL_Renderer *renderer, int *field);
 static void _clear_field(int *field);
 static int _field_get(int *field, int x, int y);
-static void _field_rows(int *field);
+static int _field_rows(int *field);
 static void _field_shift(int *field, int row);
 
 static void _draw_grid(SDL_Renderer *renderer);
@@ -192,7 +192,6 @@ int main(void)
 		_draw_piece(renderer, &cp);
 		_draw_field(renderer, field);
 		_draw_grid(renderer);
-		_draw
 
 		if((ticks = SDL_GetTicks()) > last_ticks + ticks_update)
 		{
